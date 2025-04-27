@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Link Converter</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="generated-icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Short Form Generator</h1>
+        <p>Enter a YouTube link to generate shorts from it:</p>
+        <input type="text" id="youtubeLink" placeholder="Enter YouTube link here...">
+        <button id="convertButton">Convert</button>
+        <p id="loadingIndicator" style="display: none; color: #C3DAFE; margin-top: 15px;">Loading...</p>
+    </div>
+
+    <!-- New section for aspect ratio options -->
+    <div id="optionsDiv" class="container" style="display: none; margin-top: 20px;">
+        <h2>Choose Aspect Ratio</h2>
+        <p>How would you like to format the video for short form?</p>
+        <div>
+            <input type="radio" id="cropOption" name="aspectRatio" value="crop" checked>
+            <label for="cropOption">Crop to 9:16</label>
+        </div>
+        <div>
+            <input type="radio" id="barsOption" name="aspectRatio" value="bars">
+            <label for="barsOption">Keep aspect ratio and add black bars</label>
+        </div>
+        <button id="processButton" class="download-button" style="margin-top: 20px;">Process Video</button>
+    </div>
+
+    <div id="segmentsDiv"></div>
+    <script src="script.js"></script>
+</body>
+</html>

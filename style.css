@@ -1,0 +1,147 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Basic Reset & Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Purple Gradient Background */
+    /* Redo Purple Gradient Background */
+    background: linear-gradient(135deg, #6B46C1, #5A32A3); /* A slightly different purple gradient */
+    color: #FFFFFF; /* White Main Text */
+    line-height: 1.6;
+}
+
+/* Main Container - Optional: Add glassy effect if desired */
+.container {
+    /* Optional: Glassmorphism effect */
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(10px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+
+    /* Simpler approach: Slightly transparent white or solid */
+    /* Rounded rectangle floating a bit with a different kind of purple */
+    background-color: #7C3AED; /* A different kind of purple */
+    color: #FFFFFF; /* White text inside the container */
+    padding: 40px; /* ~2.5rem */
+    border-radius: 20px; /* More rounded */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow for floating effect */
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin: 40px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for floating effect */
+}
+
+/* Typography inside the container */
+.container h1 {
+    color: #E0E7FF; /* Lighter text for heading */
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.container p {
+    color: #C3DAFE; /* Lighter gray for paragraph */
+    margin-bottom: 25px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Input Field */
+#youtubeLink {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #D1D5DB; /* Lighter gray border */
+    border-radius: 12px; /* More rounded */
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #111827; /* Dark text for input */
+    background-color: #F3F4F6; /* Light gray background */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for floating effect */
+}
+
+#youtubeLink::placeholder {
+    color: #9CA3AF;
+}
+
+/* Convert Button */
+#convertButton {
+    padding: 12px 24px;
+    background-color: #FFFFFF; /* White background */
+    color: #6B46C1; /* Darker purple text */
+    border: none; /* Remove border */
+    border-radius: 12px; /* More rounded */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+#convertButton:hover {
+    background-color: #F3F4F6; /* Very light gray on hover */
+    color: #6D28D9; /* Darker purple text */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Optional: Accent line/element example */
+.container::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #E0E7FF; /* Light indigo accent */
+    margin: 0 auto 20px; /* Center and add space below */
+    border-radius: 2px;
+}
+
+/* Input field float effect on focus */
+#youtubeLink:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.5); /* Purple glow effect */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Container floating effect on hover (optional, but complements input focus) */
+.container:hover {
+    transform: translateY(-5px); /* Lift the container slightly */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+/* Style for download links to look like buttons */
+.download-button {
+    display: inline-block; /* Make it behave like a block for padding/margin */
+    padding: 12px 24px;
+    background-color: #FFFFFF; /* White background */
+    color: #6B46C1; /* Darker purple text */
+    border: none; /* Remove border */
+    border-radius: 12px; /* More rounded */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none; /* Remove underline from links */
+    margin: 15px; /* Add some space above the links */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.download-button:hover {
+    background-color: #F3F4F6; /* Very light gray on hover */
+    color: #6D28D9; /* Darker purple text */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
